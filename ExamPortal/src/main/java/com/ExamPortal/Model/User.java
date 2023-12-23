@@ -16,6 +16,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 @Entity
@@ -23,6 +24,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "users")
+@EqualsAndHashCode(exclude = "userRoles")
 public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
